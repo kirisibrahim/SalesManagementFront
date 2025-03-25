@@ -1,0 +1,23 @@
+.bold-text {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .stock-low {
+    background-color: red;
+    color: white;
+    padding: 10px;
+  }
+  
+  .stock-medium {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+  }
+  
+  .stock-high {
+    background-color: green;
+    color: white;
+    padding: 10px;
+  }
+  

@@ -1,0 +1,53 @@
+
+.ant-table-thead > tr > th {
+    text-align: center !important;
+    background-color: #f5f5f5 !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .ant-table-thead > tr > th:hover {
+    background-color: #e0e0e0 !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    text-align: center !important;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .action-buttons button {
+    width: 50%;
+  }
+  
+  .ant-btn {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ant-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .add-user-button {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.center-align {
+  text-align: center;
+}
+
+/* UserManagement.css */
+.center-align {
+  text-align: center !important;
+}
+
+.table-header {
+  font-weight: bold;
+  text-align: center;
+}

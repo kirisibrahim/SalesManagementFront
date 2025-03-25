@@ -1,0 +1,81 @@
+.table-header {
+    text-align: center;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .edit-button, .delete-button {
+    margin-right: 8px;
+  }
+  
+  .animated-table {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.task-management-container {
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.add-task-button {
+  margin-bottom: 16px;
+}
+
+.task-table-wrapper {
+  margin-top: 20px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.task-description {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.delete-modal p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.GorevDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0px 4px 0px; 
+}
+
+.userstyle{
+  color: #000000;
+  font-weight: bold;
+}
+
+.task-assigned-users-button {
+  background-color: #fa8c16;
+  border-color: #fa8c16;
+  color: #fff;
+  float: right;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+}
+
