@@ -83,39 +83,31 @@ const SaleManagement = () => {
     setIsModalOpen(true);
   };
 
-  const handleAdd = () => {
-    setEditingSale(null);
-    form.resetFields();
-    setIsModalOpen(true);
-  };
-
   const handleSave = async () => {
     try {
       const values = await form.validateFields();
   
       // Tarih formatını ISO formatına dönüştür
-      values.saleDate = values.saleDate?.toISOString(); // Dayjs tarih formatı
+      values.saleDate = values.saleDate?.toISOString();
   
       if (editingSale) {
         console.log("Güncellenen Satış ID: ", editingSale.id);
   
         // 'id'yi de values içine ekleyin
-        values.id = editingSale.id;  // id'yi burada ekliyoruz
+        values.id = editingSale.id;
   
         // Güncelleme işlemi
-        await saleService.updateSale(editingSale.id, values); // saleId'yi gönderiyoruz
+        await saleService.updateSale(editingSale.id, values);
         message.success("Satış başarıyla güncellendi!");
-      } else {
-        await saleService.addSale(values);
-        message.success("Yeni satış başarıyla eklendi!");
-      }
   
-      fetchSales();
-      setIsModalOpen(false);
+        fetchSales();
+        setIsModalOpen(false);
+      }
     } catch (error) {
       message.error("İşlem sırasında bir hata oluştu!");
     }
   };
+  
 
   const handleDelete = async () => {
     if (deletingSaleId === null) return;
@@ -141,7 +133,7 @@ const SaleManagement = () => {
       key: "saleDate",
       render: (text: string) => dayjs(text).locale("tr").format("dddd, DD. MM. YYYY HH:mm")
     },
-    { title: "Fatura", dataIndex: "invoiceId", key: "invoiceId", render: (text: any) => text ? text : "Fatura Oluşturulmamış" },
+    { title: "Fatura", dataIndex: "invoiceId", key: "invoiceId", render: (text: any) => text ? text : "Fatura Silinmiş" },
     {
       title: "İşlemler",
       key: "actions",
@@ -161,9 +153,6 @@ const SaleManagement = () => {
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: 16 }}>
-        <Button type="primary" onClick={handleAdd}>
-          Yeni Satış Ekle
-        </Button>
         <DatePicker.RangePicker
           style={{ marginLeft: 10 }}
           format="YYYY-MM-DD HH:mm"

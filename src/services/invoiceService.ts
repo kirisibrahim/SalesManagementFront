@@ -3,9 +3,12 @@ import axios from "axios";
 const API_URL = "https://localhost:7048/api/invoice";
 
 interface InvoiceData {
+  id?: number;
   invoiceNumber: string;
-  issueDate: Date;
+  issueDate: string;
   totalAmount: number;
+  customerId?: number;
+  sales?: any[];
 }
 
 const invoiceService = {

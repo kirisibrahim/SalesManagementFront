@@ -57,7 +57,7 @@
 }
 
 .ant-table-tbody > tr:nth-child(odd) {
-  background-color: #b97272; 
+  background-color: #f0f0f0; 
 }
 
 .ant-table-tbody > tr:nth-child(even) {
@@ -65,7 +65,7 @@
 }
 
 .ant-table-tbody > tr:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 

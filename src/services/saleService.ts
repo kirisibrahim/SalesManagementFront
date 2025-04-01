@@ -26,7 +26,7 @@ const saleService = {
     }
   },
 
-  addSale: async (saleData: SaleData) => {
+/*  addSale: async (saleData: SaleData) => {
     try {
       const token = sessionStorage.getItem("token");
       const response = await axios.post(API_URL, saleData, {
@@ -37,7 +37,7 @@ const saleService = {
       console.error("Satış eklerken hata oluştu:", error);
       throw error;
     }
-  },
+  }, */
 
   updateSale: async (id: number, saleData: SaleData) => {
     try {

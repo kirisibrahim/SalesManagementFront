@@ -17,6 +17,19 @@ const customerService = {
     }
   },
 
+  getCustomerById: async (id: number) => {
+    try {
+      const token = sessionStorage.getItem("token");
+      const response = await axios.get(`${API_URL}/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Müşteri bilgilerini çekerken hata oluştu:", error);
+      throw error;
+    }
+  },
+
   addCustomer: async (customerData: { name: string; email: string; phoneNumber: string; address: string; taxNumber: string }) => {
     try {
       const token = sessionStorage.getItem("token");
@@ -55,6 +68,7 @@ const customerService = {
       throw error;
     }
   },
+
 };
 
 export default customerService;
